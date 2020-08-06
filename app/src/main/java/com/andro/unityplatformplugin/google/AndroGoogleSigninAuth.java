@@ -50,7 +50,7 @@ public class AndroGoogleSigninAuth implements AndroAuthProvider {
             GoogleSignInAccount account = task.getResult(ApiException.class);
 
             // Signed in successfully
-            onLoginCallback.OnCallback(true, account.getIdToken());
+            onLoginCallback.OnCallback(true, account.getId());
 
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
